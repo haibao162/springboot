@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<script type="text/javascript" src="jquery.js"></script>
+<script>
+$(document).ready(function(){
+	
+     $.ajax({
+     	 type: 'POST',
+     	 url:"http:localhost:8080/getRaspberryList",
+     	dataType:"json",
+     	success:function(result){
+       console.log(result);      
+    }
+});
+$.ajax({
+     	 type: 'POST',
+     	 url:"http:localhost:8080/hello"+"/name",
+     	dataType:"json",
+     	//data:{"name":"eee"},
+     	success:function(res){
+       console.log(res);    
+    }
+});
+
+
+});
+</script>
+<body>
+</body>
+</html>
